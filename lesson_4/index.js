@@ -11,8 +11,10 @@
 
 
 // 2) Исправьте код так чтобы в консоль выводились числа от 0 до 10
-for (var i = 0; i <= 10; i++) {
-   console.log(i);
+for (let i = 0; i <= 10; i++) {
+   setTimeout(() => {
+      console.log(i);
+   }, 0)
 }
 
 
@@ -20,7 +22,7 @@ for (var i = 0; i <= 10; i++) {
 var firstName = "Elena"
 const obj = {
    firstName: 'John',
-   sayFirstName: () => {
+   sayFirstName: function () {
       console.log(obj.firstName)
    }
 }
@@ -29,19 +31,15 @@ obj.sayFirstName();
 
 // 4) Исправьте код так чтобы в консоль не выводилась ошибка (нельзя исправлять тело функции getArrowFunction)
 
-class User {
-   age = 20;
-   UserFunc() {
-      this.age = age;
-
-   }
+const user = {
+   age: 20
 }
-
 function getArrowFunction() {
    "use strict"
    return () => {
       console.log(this.age)
    }
 }
-console.log(User.age);
 
+const arrowFunction = getArrowFunction.call(user);
+arrowFunction();
