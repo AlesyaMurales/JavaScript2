@@ -1,0 +1,91 @@
+*
+        padding: 0
+        margin: 0
+
+html, body, #root
+        width: 100%
+        height: 100%
+
+#root
+        display: grid
+        gap: 40px
+        position: relative
+        grid-template-rows: max-content auto
+
+header
+        background-color: black
+        height: 100px
+        display: grid
+        grid-template-columns: auto max-content max-content
+
+.title
+        color: white
+        padding: 10px
+        margin-left: 30px
+        margin-top: 20px
+
+.search
+        margin-top: 20px
+        padding: 20px
+
+.header__button
+        margin-top: 20px
+        padding: 27px
+
+.goods
+        margin-bottom: 100px
+        margin-top: 100px
+
+        &_list
+                display: flex
+                gap: 50px
+                justify-content: center
+
+        &_item
+                width: 200px
+                height: 150px
+                padding: 10px
+                text-align: center
+                box-sizing: border-box
+                outline: 1px solid black
+                display: flex
+                flex-direction: column
+                gap: 10px
+
+.goods-search
+        height: 30px
+
+.fixed-area
+        position: fixed
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: rgba(0,0,0, 0.5)
+
+.basket-card
+        width: 60%
+        height: 60%
+        background-color: white
+        display: grid
+        grid-template-rows: max-content auto
+
+        &__header
+                box-sizing: border-box
+                display: grid
+                grid-template-columns: auto max-content
+
+        &__header__title
+                padding: 10px
+
+        &__header__delete-icon
+                background-image: url("img/delete_icon.png")
+                background-size: contain
+                width: 30px
+                height: 30px
+                margin: 10px
+                cursor: pointer
+
+        &__content
+                padding: 10px
